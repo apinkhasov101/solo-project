@@ -1,3 +1,41 @@
+
+
 body {
     background-color: aquamarine;
+    line-height: 50px;}
+
+#textarea
+{
+    height:150px;
+    width: 400px;
+    font-size:12pt;
 }
+
+#textarea2
+{
+    height:100px;
+    width: 400px;
+    font-size:12pt;
+}
+
+.button{
+    height:50px;
+    width:100px;
+    font-weight : bold;
+    margin-left: 10px;
+}
+
+form {
+    box-sizing: border-box;
+    /* padding: 2rem; */
+    border-radius: 1rem;
+    background-color: hsl(154, 100%, 90%);
+    border: 4px solid hsl(0, 0%, 90%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* gap: 1.5rem; */
+  }
+
+  label {
+    margin-left: 10px;
+  }
