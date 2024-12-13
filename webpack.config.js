@@ -18,7 +18,7 @@ export default {
     entry: "./src/index.js", // entry point (where app begins)  of our app needs to be specified
 
     output: {
-        path: path.resolve(__dirname, '/dist'), // specifies output location, location stays dynamic with __dirname
+        path: path.resolve(__dirname, 'dist'), // specifies output location, location stays dynamic with __dirname
         filename: 'bundle.js'
     }, //specifies the name and path of our production build, takes all our code and bundles it as bundle.js
 
@@ -40,21 +40,22 @@ export default {
                     presets: ['@babel/preset-env', '@babel/preset-react'] // use these presets that were installed
                 }
                } 
-            }
-        //    rules: {
-        //         test: /\.s[ac]ss$/i,
-        //         use: [
-        //           // Creates `style` nodes from JS strings
-        //           'style-loader', //& takes SASS and makes it regular CSS injects into DOM as <style> tags</style>
-        //           // Translates CSS into CommonJS
-        //           'css-loader', //& resolves @ import (--fonts) and url()  (--backgrounds) tags
-        //           // Compiles Sass to CSS
-        //           'sass-loader', //& compiles SASS/SCSS to CSS, and uses the node-sass package under the hood
-        //         ],
-        //       },
-        ]
+            },
+            {
+                test: /\.css$/,
+                use:[ // ORDER MATTERS VVVV works backwards, down to up
+                  // Creates `style` nodes from JS strings
+                  'style-loader', //& takes SASS and makes it regular CSS injects into DOM as <style> tags</style>
+                  // Translates CSS into JS file
+                  'css-loader', //& resolves @ import (--fonts) and url()  (--backgrounds) tags
+                ]
+                }
+        ],
         // using babel loader to pass in module obj to determine how they will be treated
+
+//^ 'npm i css-loader -D' installs a css loader, -D installs as dev dependency
+//^ npm i style-loader -D installs a style loader, takes output from CSS loader and applies it to DOM (inside a style tag), -D installs as dev dependency
     }
 }
 
-console.log('Output path:', path.join(__dirname, '/dist'));
+console.log('Output path:', path.join(__dirname, 'dist'));

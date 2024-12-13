@@ -1,6 +1,6 @@
 import React, { useState } from 'react' // we want to destructure Component from react library because //* old method as well, not necessary inside a .jsx file (but we're in .js)
 //class App extends Component { //* extending the react Component class gives us access to the component lifecycle methods, ie. render
-// import "./App.css"
+import "./App.css"
 
 function App() {
   const [name, setName] = useState('');
