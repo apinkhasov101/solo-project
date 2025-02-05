@@ -40,7 +40,7 @@ GRIMS is a full-stack application designed to help guitar repair technicians log
      ```
 4. **Start the Backend Server**:
    ```sh
-   npm run server
+   npm run dev
    ```
 5. **Start the Frontend**:
    ```sh
