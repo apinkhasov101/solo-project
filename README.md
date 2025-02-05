@@ -25,7 +25,7 @@ GRIMS is a full-stack application designed to help guitar repair technicians log
 1. **Clone the Repository**:
    ```sh
    git clone <repo-url>
-   cd guitar-repair-catalog
+   cd grims
    ```
 2. **Install Dependencies**:
    ```sh
