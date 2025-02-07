@@ -55,11 +55,6 @@ GRIMS is a full-stack application designed to help guitar repair technicians log
 | PUT    | `/clients/:id` | Update client details |
 | DELETE | `/clients/:id` | Remove a client      |
 
-## Deployment
-For production deployment, you can use:
-- **Docker**: `docker-compose up --build`
-- **Vercel (Frontend)** and **Railway/Render (Backend)**
-
 ## Contributing
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature-name`)
