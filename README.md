@@ -36,7 +36,7 @@ GRIMS is a full-stack application designed to help guitar repair technicians log
    - Add the following variables:
      ```env
      MONGO_URI=<your_mongodb_connection_string>
-     PORT=5000
+     PORT=5001
      ```
 4. **Start the Backend Server**:
    ```sh
